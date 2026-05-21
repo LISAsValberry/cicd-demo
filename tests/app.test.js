@@ -12,3 +12,9 @@ test('add endpoint returns correct sum', async () => {
   expect(res.statusCode).toBe(200);
   expect(res.body.result).toBe(8);
 });
+
+test('sub endpoint returns correct difference', async () => {
+  const res = await request(app).get('/sub?a=10&b=3');
+  expect(res.statusCode).toBe(200);
+  expect(res.body.result).toBe(7);
+});

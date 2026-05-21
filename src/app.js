@@ -11,6 +11,12 @@ app.get('/add', (req, res) => {
   res.json({ result: a + b });
 });
 
+app.get('/sub', (req, res) => {
+  const a = Number(req.query.a);
+  const b = Number(req.query.b);
+  res.json({ result: a - b });
+});
+
 if (require.main === module) {
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
