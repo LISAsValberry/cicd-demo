@@ -8,7 +8,7 @@ app.get('/health', (req, res) => {
 app.get('/add', (req, res) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
-  res.json({ result: a - b });
+  res.json({ result: a + b });
 });
 
 if (require.main === module) {
